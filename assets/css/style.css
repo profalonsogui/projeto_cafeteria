@@ -1,0 +1,320 @@
+/* =====================================================
+   Café Aurora - Estilos personalizados
+   Bootstrap é responsável pela maior parte do layout.
+   Este arquivo concentra TODO o CSS adicional do projeto.
+   ===================================================== */
+
+:root {
+    --coffee-dark: #2f211d;
+    --coffee-medium: #6f4e37;
+    --coffee-light: #c8a27a;
+    --cream: #f7f1e8;
+    --cream-dark: #eadfce;
+    --text-dark: #302a27;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-dark);
+    background-color: #fffdf9;
+}
+
+main {
+    flex: 1;
+}
+
+/* Navegação */
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: 0.04rem;
+}
+
+.navbar-brand i {
+    color: var(--coffee-light);
+}
+
+.navbar-dark-coffee {
+    background-color: rgba(47, 33, 29, 0.97);
+    backdrop-filter: blur(8px);
+}
+
+.navbar .nav-link {
+    position: relative;
+    font-weight: 600;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.15rem;
+    height: 2px;
+    background-color: var(--coffee-light);
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* Componentes reutilizáveis */
+.section-padding {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-weight: 800;
+    color: var(--coffee-dark);
+}
+
+.section-subtitle {
+    max-width: 680px;
+    color: #6c625d;
+}
+
+.bg-cream {
+    background-color: var(--cream);
+}
+
+.text-coffee {
+    color: var(--coffee-medium);
+}
+
+.btn-coffee {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--coffee-medium);
+    --bs-btn-border-color: var(--coffee-medium);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--coffee-dark);
+    --bs-btn-hover-border-color: var(--coffee-dark);
+    --bs-btn-active-bg: var(--coffee-dark);
+    --bs-btn-active-border-color: var(--coffee-dark);
+}
+
+.btn-outline-coffee {
+    --bs-btn-color: var(--coffee-medium);
+    --bs-btn-border-color: var(--coffee-medium);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--coffee-medium);
+    --bs-btn-hover-border-color: var(--coffee-medium);
+}
+
+.icon-circle {
+    width: 64px;
+    height: 64px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--cream-dark);
+    color: var(--coffee-medium);
+    font-size: 1.6rem;
+}
+
+.hover-card {
+    border: 0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1rem 2rem rgba(47, 33, 29, 0.14) !important;
+}
+
+.card-img-cover {
+    height: 230px;
+    object-fit: cover;
+}
+
+/* Home */
+.hero-home {
+    min-height: 76vh;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background:
+        linear-gradient(rgba(25, 17, 14, 0.68), rgba(25, 17, 14, 0.68)),
+        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1920&q=85") center/cover no-repeat;
+}
+
+.hero-home h1 {
+    max-width: 760px;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 1.05;
+}
+
+.hero-home p {
+    max-width: 650px;
+    font-size: 1.15rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--coffee-medium);
+}
+
+/* Cabeçalhos internos */
+.page-header {
+    padding: 7.5rem 0 4.5rem;
+    color: var(--white);
+    background:
+        linear-gradient(rgba(34, 23, 19, 0.82), rgba(34, 23, 19, 0.82)),
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1920&q=85") center/cover no-repeat;
+}
+
+.page-header h1 {
+    font-weight: 900;
+}
+
+/* Sobre */
+.about-image {
+    min-height: 420px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.timeline-item {
+    border-left: 3px solid var(--coffee-light);
+    padding-left: 1.25rem;
+}
+
+/* Produtos */
+.product-price {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--coffee-medium);
+}
+
+.product-badge {
+    background-color: var(--cream-dark);
+    color: var(--coffee-dark);
+}
+
+/* Equipe */
+.team-photo {
+    height: 320px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.social-link {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--coffee-medium);
+    background-color: var(--cream);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--white);
+    background-color: var(--coffee-medium);
+}
+
+/* Contato */
+.contact-card {
+    border: 0;
+    border-radius: 1rem;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: var(--coffee-medium);
+    background-color: var(--cream-dark);
+    font-size: 1.25rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--coffee-light);
+    box-shadow: 0 0 0 0.25rem rgba(200, 162, 122, 0.25);
+}
+
+.map-placeholder {
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    color: var(--coffee-dark);
+    background:
+        linear-gradient(rgba(247, 241, 232, 0.78), rgba(247, 241, 232, 0.78)),
+        url("https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+}
+
+/* CTA e rodapé */
+.cta-section {
+    color: var(--white);
+    background-color: var(--coffee-medium);
+}
+
+.footer {
+    color: #e9dfd7;
+    background-color: var(--coffee-dark);
+}
+
+.footer a {
+    color: #e9dfd7;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--coffee-light);
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 991.98px) {
+    .navbar .nav-link::after {
+        display: none;
+    }
+
+    .hero-home {
+        min-height: 68vh;
+        text-align: center;
+    }
+
+    .hero-home p {
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .section-padding {
+        padding: 3.5rem 0;
+    }
+
+    .page-header {
+        padding: 6.5rem 0 3.5rem;
+    }
+
+    .card-img-cover,
+    .team-photo {
+        height: 250px;
+    }
+}
