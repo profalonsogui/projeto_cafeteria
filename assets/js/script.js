@@ -1,6 +1,5 @@
 /* =====================================================
    Café Aurora - JavaScript com jQuery
-   Arquivo inicial preparado para futuras funcionalidades.
    ===================================================== */
 
 $(function () {
