@@ -289,6 +289,54 @@ main {
     border-color: rgba(255, 255, 255, 0.15);
 }
 
+/* Modo escuro (ativado pelo script.js com data-bs-theme="dark") */
+[data-bs-theme="dark"] body {
+    color: #eadfce;
+    background-color: #1a1310;
+}
+
+[data-bs-theme="dark"] .bg-cream {
+    background-color: #241a16;
+}
+
+[data-bs-theme="dark"] .bg-white {
+    background-color: #2f2420 !important;
+}
+
+[data-bs-theme="dark"] .section-title {
+    color: #f7f1e8;
+}
+
+[data-bs-theme="dark"] .section-subtitle {
+    color: #bfb2a8;
+}
+
+[data-bs-theme="dark"] .text-coffee,
+[data-bs-theme="dark"] .stat-number,
+[data-bs-theme="dark"] .product-price {
+    color: var(--coffee-light);
+}
+
+[data-bs-theme="dark"] .btn-outline-coffee {
+    --bs-btn-color: var(--coffee-light);
+    --bs-btn-border-color: var(--coffee-light);
+}
+
+[data-bs-theme="dark"] .icon-circle,
+[data-bs-theme="dark"] .contact-icon,
+[data-bs-theme="dark"] .product-badge,
+[data-bs-theme="dark"] .social-link {
+    color: var(--coffee-light);
+    background-color: #3a2c26;
+}
+
+[data-bs-theme="dark"] .map-placeholder {
+    color: #f7f1e8;
+    background:
+        linear-gradient(rgba(26, 19, 16, 0.78), rgba(26, 19, 16, 0.78)),
+        url("https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+}
+
 @media (max-width: 991.98px) {
     .navbar .nav-link::after {
         display: none;
